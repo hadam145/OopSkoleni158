@@ -6,3 +6,4 @@ jazyk = Jazyk.CSHARP
 print(jazyk)
 
 petr = Programator("Petr", 25, Jazyk.CSHARP)
+tomas = Programator("Tomas", 25, Jazyk.CSHARP)
