@@ -1,9 +1,23 @@
-from nakladak import Nakladak
+from Lide.clovek import Clovek
 
-tatra = Nakladak()
+lenka = Clovek("Lenka",50)
+petr = Clovek("Petr",50)
+tomas = Clovek("Tomas",50)
+david = Clovek("David",50)
+marek = Clovek("Marek",50)
+adam = Clovek("Adam",50)
+honza = Clovek("Honza",50)
 
-try:
-    tatra.naloz(5000)
-    tatra.vyloz(6000)
-except Exception as e:
-    print(e)
+
+print(Clovek.vrat_pocet_lidi())
+
+lide = [
+    lenka,
+    petr,
+    tomas,
+    david,
+    marek,
+    adam,
+    honza
+]
+print(f"Pocet lidi :{len(lide)}")

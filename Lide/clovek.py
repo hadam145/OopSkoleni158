@@ -1,18 +1,29 @@
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
 
 #Třída Clovek podle které se tvoří objekty
-class Clovek(ABC):
+class Clovek():
 
-    @abstractmethod
-    def vrat_povolani(self):
-        pass
+    _pocet_lidi = 0
+
+    @staticmethod
+    def pridej_cloveka():
+        Clovek._pocet_lidi += 1
+
+    @staticmethod
+    def vrat_pocet_lidi():
+        return Clovek._pocet_lidi
+
+    # @abstractmethod
+    # def vrat_povolani(self):
+    #     pass
 
     #Konstruktor, přijíma paramtery jmeno a vek
     #A nastavuje atributy jmeno a vek
     def __init__(self, jmeno, vek):
         self.__jmeno = jmeno
         self.__vek = vek
+        Clovek.pridej_cloveka()
 
     @property
     def jmeno(self):
