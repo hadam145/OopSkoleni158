@@ -1,13 +1,12 @@
-from Lide.clovek import Clovek
+class Box:
+    def __init__(self, v):
+        self.v = v
 
-lenka = Clovek("Lenka",50)
-#petr = Clovek("Petr",50)
-petr = Clovek("Lenka",50)
+    # def __eq__(self, other):
+    #     return self.v == other.v
 
-# lenka = petr
+a = Box(10)
+b = Box(10)
+c = None
 
-print(lenka==petr)
-
-print(lenka is petr)
-
-
+print(a==b, c is None)
