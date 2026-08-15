@@ -7,12 +7,13 @@ class Nakladak:
 
     def naloz(self, hmotnost):
         if hmotnost > self.nosnost:
-            print("Nelze nalozit vic nez je nosnost")
+            raise Exception("Nelze nalozit vic nez je nosnost")
         else:
             self._naklad += hmotnost
 
     def vyloz(self, hmotnost):
-
+        if hmotnost > self.nosnost:
+            raise Exception("Nelze vylozit vic nez je naklad")
         self._naklad -= hmotnost
 
     def vypis(self):

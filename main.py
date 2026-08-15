@@ -1,9 +1,9 @@
-from jazyk import Jazyk
-from programator import Programator
+from nakladak import Nakladak
 
-jazyk = Jazyk.CSHARP
+tatra = Nakladak()
 
-print(jazyk)
-
-petr = Programator("Petr", 25, Jazyk.CSHARP)
-tomas = Programator("Tomas", 25, Jazyk.CSHARP)
+try:
+    tatra.naloz(5000)
+    tatra.vyloz(6000)
+except Exception as e:
+    print(e)
