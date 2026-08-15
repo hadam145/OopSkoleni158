@@ -4,6 +4,8 @@
 #Třída Clovek podle které se tvoří objekty
 class Clovek():
 
+    PLNOLETOST = 18
+
     _pocet_lidi = 0
 
     @staticmethod
@@ -54,3 +56,6 @@ class Clovek():
         return (f"Třída {__class__.__name__}"
                 f"Jsem {self.jmeno}, "
                 f"mám {self.vek} let.")
+
+    def __eq__(self, other):
+        return self.vek == other.vek
